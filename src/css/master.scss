@@ -1,0 +1,160 @@
+
+@import url('normalize.css');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  background: url('../img/background.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('./fonts/HelveticaNeue.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'HelveticaNeue Bold';
+  src: url('./fonts/helvetica-neue-bold.ttf')  format('truetype');
+}*/
+
+svg {
+  fill: #fff;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.player {
+  /*width: 640px;
+  height: 1008px;*/
+  position: relative;
+  width: 320px;
+  height: 504px;
+  border-radius: 20px;
+  /*font-family: 'HelveticaNeue Bold', Helvetica-Neue, HelveticaNeue, Arial, sans-serif;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: #282833;
+}
+
+.player::before {
+  content: '';
+  width: 280px;
+  height: inherit;
+  background: #030305;
+  z-index: -1;
+  position: absolute;
+  /*top: 20px;*/
+  left: 20px;
+  box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.75);
+}
+
+
+.player-navbar {
+  display: flex;
+  justify-content: space-between;
+
+  height: 80px;
+  background: #edad61;
+  border-radius: 20px 20px 0px 0px;
+  padding: 20px;
+
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.station-details, .station-freq {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.station-details {
+  margin-bottom: 30px;
+}
+.station-freq > span:nth-child(2){
+  font-weight: bold;
+}
+
+.player-list {
+  padding: 10px 20px 20px 20px;
+  height: 344px;
+  overflow-y: auto;
+
+  svg {
+    fill: #a2abbd;
+  }
+}
+
+.player-list::-webkit-scrollbar {
+display: none;
+}
+
+.player-station {
+  /*display: flex;
+  justify-content: space-between;*/
+  padding: 25px 0 15px 0;
+  border-bottom: 1px solid #4d505c;
+  color: #a2abbd;
+  font-weight: normal;
+}
+.player-station:last-child {
+  border-bottom: none;
+}
+
+.station-cover {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  // border: 1px solid #4d505c;
+  background: url('../img/station_preview.png');
+  background-size: 130px 130px;
+}
+
+.playlist-tabbar{
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  background: #22222b;
+  width: inherit;
+  border-radius: 0 0 20px 20px;
+  border-top: 1px solid #4d505c;
+
+  .active-current {
+    font-size: 11px;
+    color: #edae61;
+    display: block;
+  }
+  .active-name {
+    font-size: 22px;
+    font-weight: normal;
+    color: #a2abbd;
+  }
+}
+
+.active-station {
+  text-align: center;
+
+}
+
+
+
+.container {
+  height: 100vh;
+}
